@@ -1,17 +1,22 @@
-<script> 
-     //Problema: Eleitor 
-     //Peça para o usuário informar a sua idade e diga, ao final do programa, se ele pode ou não votar. 
-  
-     //ENTRADA 
+<script>
+    //Problema: Eleitor 
+    //Peça para o usuário informar a sua idade e diga, ao final do programa, se ele pode ou não votar. 
+
+    //ENTRADA 
     const idade = Number(prompt(`Insira a sua idade`).trim());
-  
-     //PROCESSAMENTO 
-    
-  
-     //SAÍDA 
-    if (idade >= 16) {
-        document.write(`Você está apto a votar`);
+    const titulo = prompt(`Você possui titulo eleitoral? (Responda "sim" ou "não")`).trim().toLocaleLowerCase();
+
+    //PROCESSAMENTO 
+
+
+    //SAÍDA 
+    if (titulo == "sim" || titulo == "não") {
+        if (idade >= 16 && titulo == "sim") {
+            document.write(`Você está apto a votar`);
+        } else {
+            document.write(`Você não está apto a votar`);
+        }
     } else {
-        document.write(`Você não está apto a votar`);
+        document.write(`Você é problemático?`)
     };
- </script>
+</script>
